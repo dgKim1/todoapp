@@ -12,7 +12,7 @@ addBttn.addEventListener("click", addTask);
 //기본 underline style 설정 (all탭 아래)
 underLine.style.left = tabs[1].offsetLeft + "px";
 underLine.style.width = tabs[1].offsetWidth + "px";
-underLine.style.top = tabs[1].offsetTop - 3 + tabs[1].offsetHeight + "px";
+underLine.style.top = tabs[1].offsetTop - 2 + tabs[1].offsetHeight + "px";
 
 for (let i = 1; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (event) {
@@ -25,7 +25,7 @@ function horizontalIndicator(e) {
   underLine.style.left = e.currentTarget.offsetLeft + "px";
   underLine.style.width = e.currentTarget.offsetWidth + "px";
   underLine.style.top =
-    e.currentTarget.offsetTop - 3 + e.currentTarget.offsetHeight + "px";
+    e.currentTarget.offsetTop - 2 + e.currentTarget.offsetHeight + "px";
 }
 
 function enterkey() {
