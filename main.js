@@ -9,15 +9,12 @@ let check = true;
 
 addBttn.addEventListener("click", addTask);
 
-//기본 underline style 설정 (all탭 아래)
-underLine.style.left = tabs[1].offsetLeft + "px";
-underLine.style.width = tabs[1].offsetWidth + "px";
-underLine.style.top = tabs[1].offsetTop - 2 + tabs[1].offsetHeight + "px";
-
 for (let i = 1; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (event) {
     filter(event);
+    console.log(event);
   });
+
   tabs[i].addEventListener("click", (e) => horizontalIndicator(e));
 }
 
@@ -111,16 +108,16 @@ function toggleComplete(id) {
 function deleteTask(id) {
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id === id) {
-      taskList.splice(i, 1);
-      break;
-    }
+      taskList.splice(i, 1)
   }
   filter();
+}
 }
 
 function filter(event) {
   if(event){
     mode = event.target.id;
+    horizontalIndicator(event);
   }
   
   filterList = [];
