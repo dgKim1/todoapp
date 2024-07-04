@@ -8,6 +8,15 @@ body{
     height: 100vh;
 }
 
+.big-title{
+    color: orange;
+}
+
+.input-area{
+    display: flex;
+    align-items: center;
+}
+
 .container{
     background-color: white;
     height: 90%;
@@ -48,7 +57,7 @@ body{
 
 .task-done{
     text-decoration: line-through;
-    background-color: lightgray;
+    color: lightgray;
     transition: 0.5s;
 }
 
@@ -62,9 +71,24 @@ body{
     margin-left: 5px;
 }
 
+#add-bttn{
+    color:black;
+    margin-left: 5px;
+}
+#add-bttn:hover{
+    color: orange;
+}
 
+#check-button{
+    color: #12f2af;
+}
+
+#reset-button{
+    color: orange;
+}
 #delete-button{
     margin-right: 5px;
+    color: red;
 }
 
 #calendar{
@@ -83,6 +107,10 @@ body{
         height: 3px;
         width: 60px;
         top: 215px;
+    }
+
+    .input-area{
+        margin-top: 5px;
     }
     
 }
